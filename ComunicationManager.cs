@@ -341,7 +341,14 @@ namespace scrollslive.Mod
 
             if (t == " " && this.recer != null && this.recer.recording && (type == "vmsr" || type == "vmwo"))
             {
-                t = "bn:"+this.bttlnumber;
+                t = "bn:" + this.bttlnumber;
+            }
+            else
+            {
+                if (t == " " && (type == "vmsr" || type == "vmwo"))
+                {
+                    t = "bn:" + this.getUnix();//so all got the streamer time
+                }
             }
             WhisperMessage wm = new WhisperMessage();
             wm.toProfileName = target;

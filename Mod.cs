@@ -120,7 +120,7 @@ namespace scrollslive.Mod
 
 		public static int GetVersion()
 		{
-			return 160;
+			return 161;
 		}
 
 		public void handleMessage(Message msg)
